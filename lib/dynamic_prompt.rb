@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 # frozen_string_literal: true
 
-###▙▖▙▖▞▞▙ DYNAMIC PROMPT SYSTEM ▂▂▂▂▂▂▂▂▂▂▂▂
+###▙▖▙▖▞▞▙ DYNAMIC PROMPT :: SYSTEM ▂▂▂▂▂▂▂▂▂▂▂▂
 # Redis-backed prompt management for AI agents
 # Reduces context window usage by storing evolving prompts in memory
 # Allows real-time modifications without conversation history bloat
