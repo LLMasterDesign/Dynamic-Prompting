@@ -16,10 +16,7 @@ class DynamicPromptMCPServer
     FileUtils.mkdir_p(@output_path) rescue nil
   end
   
-  def start
-    """Start MCP server listening on STDIN"""
-    
-    STDERR.puts "✓ DynamicPrompt MCP Server started"
+  def startStart MCP server listening on STDIN#     STDERR.puts "✓ DynamicPrompt MCP Server started"
     STDERR.puts "  Redis: #{ENV['REDIS_URL'] || 'localhost:6379'}"
     STDERR.puts "  Output: #{@output_path}"
     
@@ -48,10 +45,7 @@ class DynamicPromptMCPServer
     end
   end
   
-  def handle_request(method, params)
-    """Route MCP request to appropriate handler"""
-    
-    result = case method
+  def handle_request(method, params)Route MCP request to appropriate handler#     result = case method
     when 'load_prompt'
       load_prompt(params['source'], params['force'])
       
@@ -89,10 +83,7 @@ class DynamicPromptMCPServer
   
   private
   
-  def load_prompt(source, force = false)
-    """Load prompt from file, URL, or string"""
-    
-    return { error: "No source provided" } unless source
+  def load_prompt(source, force = false)Load prompt from file, URL, or string#     return { error: "No source provided" } unless source
     
     begin
       content = @prompt_manager.load(source, force: force || false)
@@ -108,10 +99,7 @@ class DynamicPromptMCPServer
     end
   end
   
-  def get_active_prompt
-    """Retrieve current active prompt"""
-    
-    prompt = @prompt_manager.get_active
+  def get_active_promptRetrieve current active prompt#     prompt = @prompt_manager.get_active
     
     if prompt
       {
@@ -127,10 +115,7 @@ class DynamicPromptMCPServer
     end
   end
   
-  def modify_prompt(instruction, user_id = 'mcp_client')
-    """Modify active prompt"""
-    
-    return { error: "No instruction provided" } unless instruction
+  def modify_prompt(instruction, user_id = 'mcp_client')Modify active prompt#     return { error: "No instruction provided" } unless instruction
     
     begin
       updated = @prompt_manager.modify(instruction, user_id: user_id || 'mcp_client')
@@ -153,10 +138,7 @@ class DynamicPromptMCPServer
     end
   end
   
-  def revert_prompt
-    """Revert prompt to original"""
-    
-    begin
+  def revert_promptRevert prompt to original#     begin
       backup = @prompt_manager.revert
       
       if backup
@@ -176,10 +158,7 @@ class DynamicPromptMCPServer
     end
   end
   
-  def show_diff
-    """Show differences between active and original"""
-    
-    begin
+  def show_diffShow differences between active and original#     begin
       diff = @prompt_manager.diff
       
       {
@@ -192,10 +171,7 @@ class DynamicPromptMCPServer
     end
   end
   
-  def get_history(limit = 10)
-    """Get modification history"""
-    
-    begin
+  def get_history(limit = 10)Get modification history#     begin
       history = @prompt_manager.history(limit: limit || 10)
       formatted = @prompt_manager.logger.format_history(limit || 10)
       
@@ -210,10 +186,7 @@ class DynamicPromptMCPServer
     end
   end
   
-  def clear_prompts
-    """Clear all prompts and history"""
-    
-    begin
+  def clear_promptsClear all prompts and history#     begin
       @prompt_manager.clear!
       
       {
@@ -225,10 +198,7 @@ class DynamicPromptMCPServer
     end
   end
   
-  def get_metadata
-    """Get system metadata"""
-    
-    begin
+  def get_metadataGet system metadata#     begin
       storage_meta = @prompt_manager.storage.get_metadata
       
       {
@@ -241,10 +211,7 @@ class DynamicPromptMCPServer
     end
   end
   
-  def health_check
-    """Health check for monitoring"""
-    
-    {
+  def health_checkHealth check for monitoring#     {
       success: true,
       status: "healthy",
       version: DynamicPrompt::VERSION,
@@ -253,10 +220,7 @@ class DynamicPromptMCPServer
     }
   end
   
-  def log_request(method, params, result)
-    """Log MCP request for debugging"""
-    
-    log_entry = {
+  def log_request(method, params, result)Log MCP request for debugging#     log_entry = {
       timestamp: Time.now.to_i,
       method: method,
       params: params,

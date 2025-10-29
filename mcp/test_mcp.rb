@@ -7,10 +7,7 @@
 require 'json'
 require 'open3'
 
-def send_mcp_request(method, params = {})
-  """Send request to MCP server and get response"""
-  
-  request = {
+def send_mcp_request(method, params = {})Send request to MCP server and get response#   request = {
     method: method,
     params: params
   }

@@ -14,39 +14,25 @@ class DynamicPrompt
       @redis = redis
     end
     
-    def exists?
-      """Check if active prompt exists in Redis"""
-      @redis.exists?(ACTIVE_KEY) > 0
+    def exists?Check if active prompt exists in Redis#       @redis.exists?(ACTIVE_KEY) > 0
     end
     
-    def get_active
-      """Retrieve active prompt"""
-      @redis.get(ACTIVE_KEY)
+    def get_activeRetrieve active prompt#       @redis.get(ACTIVE_KEY)
     end
     
-    def set_active(content)
-      """Store active prompt"""
-      @redis.set(ACTIVE_KEY, content)
+    def set_active(content)Store active prompt#       @redis.set(ACTIVE_KEY, content)
     end
     
-    def get_backup
-      """Retrieve backup (original) prompt"""
-      @redis.get(BACKUP_KEY)
+    def get_backupRetrieve backup (original) prompt#       @redis.get(BACKUP_KEY)
     end
     
-    def set_backup(content)
-      """Store backup (original) prompt"""
-      @redis.set(BACKUP_KEY, content)
+    def set_backup(content)Store backup (original) prompt#       @redis.set(BACKUP_KEY, content)
     end
     
-    def clear_all!
-      """Delete all stored prompts"""
-      @redis.del(ACTIVE_KEY, BACKUP_KEY)
+    def clear_all!Delete all stored prompts#       @redis.del(ACTIVE_KEY, BACKUP_KEY)
     end
     
-    def get_metadata
-      """Get storage metadata"""
-      {
+    def get_metadataGet storage metadata#       {
         active_exists: exists?,
         active_size: get_active&.length || 0,
         backup_exists: @redis.exists?(BACKUP_KEY) > 0,

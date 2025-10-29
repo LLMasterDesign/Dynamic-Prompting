@@ -8,8 +8,7 @@
 class DynamicPrompt
   class Modifier
     def apply(prompt, instruction)
-      """
-      Apply modification to prompt based on natural language instruction
+      #       Apply modification to prompt based on natural language instruction
       
       Supported patterns:
         - "change tone to X"
@@ -18,9 +17,7 @@ class DynamicPrompt
         - "default X sentences"
         - "set temperature to X"
         - "make more/less verbose"
-      """
-      
-      instruction_lower = instruction.downcase.strip
+      #       instruction_lower = instruction.downcase.strip
       modified = prompt.dup
       
       # Pattern: "change tone to X"
@@ -61,10 +58,7 @@ class DynamicPrompt
     
     private
     
-    def change_tone(prompt, new_tone)
-      """Change tone in prompt"""
-      
-      # Look for existing tone specification
+    def change_tone(prompt, new_tone)Change tone in prompt#       # Look for existing tone specification
       if prompt =~ /Tone:\s*.+$/i
         prompt.gsub(/Tone:\s*.+$/i, "Tone: #{new_tone.strip.capitalize}")
       elsif prompt =~ /(Communication Style|Response Style)/i
@@ -76,10 +70,7 @@ class DynamicPrompt
       end
     end
     
-    def add_rule(prompt, rule_text)
-      """Add new rule to CORE RULES or RULES section"""
-      
-      # Find rules section
+    def add_rule(prompt, rule_text)Add new rule to CORE RULES or RULES section#       # Find rules section
       if prompt =~ /(CORE RULES|RULES|GUIDELINES).*?\n(.*?)((?:\n\n|\z|###|▛))/mi
         section_header = $1
         rules_content = $2
@@ -100,27 +91,18 @@ class DynamicPrompt
       end
     end
     
-    def remove_rule(prompt, topic)
-      """Remove rule matching topic"""
-      
-      # Find and remove matching rule line(s)
+    def remove_rule(prompt, topic)Remove rule matching topic#       # Find and remove matching rule line(s)
       prompt.gsub(/^\s*\d+\.\s+.*?#{Regexp.escape(topic)}.*?\n/i, '')
     end
     
-    def change_sentence_default(prompt, num_sentences)
-      """Change default sentence count"""
-      
-      if prompt =~ /DEFAULT\s+\d+\s+SENTENCE/i
+    def change_sentence_default(prompt, num_sentences)Change default sentence count#       if prompt =~ /DEFAULT\s+\d+\s+SENTENCE/i
         prompt.gsub(/DEFAULT\s+\d+\s+SENTENCE/i, "DEFAULT #{num_sentences} SENTENCE")
       else
         prompt + "\n\nDEFAULT #{num_sentences} SENTENCES\n"
       end
     end
     
-    def change_verbosity(prompt, direction)
-      """Increase or decrease verbosity"""
-      
-      if direction == "more"
+    def change_verbosity(prompt, direction)Increase or decrease verbosity#       if direction == "more"
         # Increase default sentences
         if prompt =~ /DEFAULT\s+(\d+)\s+SENTENCE/i
           current = $1.to_i
@@ -140,10 +122,7 @@ class DynamicPrompt
       end
     end
     
-    def adjust_trait(prompt, trait, intensity)
-      """Adjust personality trait (more/less)"""
-      
-      modifier = intensity == "more" ? "more" : "less"
+    def adjust_trait(prompt, trait, intensity)Adjust personality trait (more/less)#       modifier = intensity == "more" ? "more" : "less"
       note = "\n\nNote: Be #{modifier} #{trait}.\n"
       
       # Check if similar note already exists

@@ -14,10 +14,7 @@ class DynamicPrompt
       @redis = redis
     end
     
-    def log_action(action, metadata = {})
-      """Log general action (load, revert, etc)"""
-      
-      entry = {
+    def log_action(action, metadata = {})Log general action (load, revert, etc)#       entry = {
         timestamp: Time.now.to_i,
         action: action,
         metadata: metadata
@@ -27,10 +24,7 @@ class DynamicPrompt
       @redis.ltrim(CHANGELOG_KEY, 0, MAX_HISTORY - 1)
     end
     
-    def log_modification(user_id, instruction)
-      """Log prompt modification"""
-      
-      entry = {
+    def log_modification(user_id, instruction)Log prompt modification#       entry = {
         timestamp: Time.now.to_i,
         action: 'modify',
         user_id: user_id,
@@ -41,25 +35,17 @@ class DynamicPrompt
       @redis.ltrim(CHANGELOG_KEY, 0, MAX_HISTORY - 1)
     end
     
-    def get_history(limit = 10)
-      """Retrieve modification history"""
-      
-      entries = @redis.lrange(CHANGELOG_KEY, 0, limit - 1)
+    def get_history(limit = 10)Retrieve modification history#       entries = @redis.lrange(CHANGELOG_KEY, 0, limit - 1)
       
       entries.map do |entry_json|
         JSON.parse(entry_json, symbolize_names: true)
       end
     end
     
-    def clear_all!
-      """Clear entire changelog"""
-      @redis.del(CHANGELOG_KEY)
+    def clear_all!Clear entire changelog#       @redis.del(CHANGELOG_KEY)
     end
     
-    def format_history(limit = 10)
-      """Get formatted history for display"""
-      
-      history = get_history(limit)
+    def format_history(limit = 10)Get formatted history for display#       history = get_history(limit)
       
       return "No history" if history.empty?
       
