@@ -1,0 +1,13 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+###▙▖▙▖▞▞▙ DYNAMIC PROMPT MCP EXECUTABLE ▂▂▂▂▂▂▂▂▂▂▂▂
+
+require_relative '../mcp/prompt_server'
+
+# Start MCP server
+server = DynamicPromptMCPServer.new
+server.start
+
+###▙▖▙▖▞▞▙ END :: Executable ▂▂▂▂▂▂▂▂▂▂▂▂
+

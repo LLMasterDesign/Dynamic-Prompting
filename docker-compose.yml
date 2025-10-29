@@ -1,0 +1,52 @@
+###▙▖▙▖▞▞▙ DOCKER COMPOSE :: DYNAMIC PROMPT ▂▂▂▂▂▂▂▂▂▂▂▂
+
+version: '3.8'
+
+services:
+  redis:
+    image: redis:7-alpine
+    container_name: dynamic_prompt_redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    command: redis-server --appendonly yes
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
+    networks:
+      - prompt_network
+
+  prompt_server:
+    build: .
+    container_name: dynamic_prompt_server
+    depends_on:
+      redis:
+        condition: service_healthy
+    environment:
+      - REDIS_URL=redis://redis:6379/0
+      - OUTPUT_PATH=/app/output
+    volumes:
+      - ./output:/app/output
+      - ./prompts:/app/prompts
+    stdin_open: true
+    tty: true
+    networks:
+      - prompt_network
+
+volumes:
+  redis_data:
+    driver: local
+
+networks:
+  prompt_network:
+    driver: bridge
+
+###▙▖▙▖▞▞▙▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
+# SEAL :: DYNAMIC.PROMPT.DOCKER
+# ⧗ :: Redis + Ruby MCP Server
+# :: ∎
+###▙▖▙▖▞▞▙▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
+

@@ -1,0 +1,10 @@
+.git
+.gitignore
+*.md
+!README.md
+spec/
+output/
+tmp/
+.rspec_status
+Gemfile.lock
+
