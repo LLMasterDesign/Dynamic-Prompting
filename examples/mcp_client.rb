@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 # frozen_string_literal: true
 
-###▙▖▙▖▞▞▙ MCP CLIENT EXAMPLE ▂▂▂▂▂▂▂▂▂▂▂▂
+###▙▖▙▖▞▞▙ MCP :: CLIENT EXAMPLE ▂▂▂▂▂▂▂▂▂▂▂▂
 # Shows how to interact with the MCP server programmatically
 
 require 'json'
