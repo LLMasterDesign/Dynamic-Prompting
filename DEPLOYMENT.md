@@ -1,9 +1,9 @@
 # Deployment Guide
-
+```rust
 ###▙▖▙▖▞▞▙ DYNAMIC PROMPT :: DEPLOYMENT ▂▂▂▂▂▂▂▂▂▂▂▂
 
 Complete guide for deploying Dynamic Prompt System to production.
-
+```
 ## Pre-Deployment Checklist
 
 - [ ] Redis server available (local or cloud)
@@ -401,11 +401,11 @@ docker-compose up -d
 
 ---
 
-```
+```rust
 ###▙▖▙▖▞▞▙▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
 # SEAL :: DEPLOYMENT.GUIDE
 # ⧗ :: From Development to Production
-# :: ∎
+# Credit: LLMDesign 2025
 ###▙▖▙▖▞▞▙▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
 ```
 
