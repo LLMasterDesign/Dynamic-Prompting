@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 # frozen_string_literal: true
 
-###▙▖▙▖▞▞▙ BASIC USAGE EXAMPLE ▂▂▂▂▂▂▂▂▂▂▂▂
+###▙▖▙▖▞▞▙ BASIC USAGE EXAMPLE :: ▂▂▂▂▂▂▂▂▂▂▂▂
 
 require 'dynamic_prompt'
 
