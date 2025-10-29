@@ -1,4 +1,4 @@
-```
+```rust
 ///▙▖▙▖▞▞▙▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
 ▛//▞▞ ⟦⎊⟧ :: DYNAMIC.PROMPT.SYSTEM :: v1.0.0 ▞▞
 //▞ Complete Documentation & API Reference
@@ -17,7 +17,7 @@ Redis-backed dynamic prompt management system for AI agents. Reduces context win
 
 ---
 
-///▙▖▙▖▞▞▙ SECTION :: OVERVIEW ▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
+///▙▖▙▖▞▞▙ OVERVIEW ▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
 
 ## ▛▞ THE PROBLEM :: Token Waste
 
@@ -68,7 +68,7 @@ Savings: 20,000 tokens per 20-turn conversation
 
 :: ∎
 
-///▙▖▙▖▞▞▙ SECTION :: INSTALLATION ▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
+///▙▖▙▖▞▞▙ INSTALLATION ▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
 
 ## ▛▞ INSTALLATION
 
@@ -122,7 +122,7 @@ ruby mcp/prompt_server.rb
 
 :: ∎
 
-///▙▖▙▖▞▞▙ SECTION :: BASIC USAGE ▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
+///▙▖▙▖▞▞▙ BASIC USAGE ▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
 
 ## ▛▞ BASIC USAGE
 
@@ -234,7 +234,7 @@ dp.clear!
 
 :: ∎
 
-///▙▖▙▖▞▞▙ SECTION :: INTEGRATION EXAMPLES ▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
+///▙▖▙▖▞▞▙ INTEGRATION EXAMPLES ▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
 
 ## ▛▞ OPENAI INTEGRATION
 
@@ -368,7 +368,7 @@ response = chat.chat("Tell me about Ruby")
 
 :: ∎
 
-///▙▖▙▖▞▞▙ SECTION :: MODIFICATION PATTERNS ▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
+///▙▖▙▖▞▞▙ MODIFICATION PATTERNS ▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
 
 ## ▛▞ NATURAL LANGUAGE MODIFICATIONS
 
@@ -450,7 +450,7 @@ dp.logger.log_action('custom_edit', metadata: { type: 'manual_gsub' })
 
 :: ∎
 
-///▙▖▙▖▞▞▙ SECTION :: MCP SERVER ▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
+///▙▖▙▖▞▞▙ MCP SERVER ▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
 
 ## ▛▞ MCP SERVER (Model Context Protocol)
 
@@ -550,7 +550,7 @@ puts result[:prompt]
 
 :: ∎
 
-///▙▖▙▖▞▞▙ SECTION :: API REFERENCE ▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
+///▙▖▙▖▞▞▙ API REFERENCE ▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
 
 ## ▛▞ API REFERENCE
 
@@ -708,7 +708,7 @@ dp.logger.clear_all!                             # Clear changelog
 
 :: ∎
 
-///▙▖▙▖▞▞▙ SECTION :: ARCHITECTURE & DESIGN ▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
+///▙▖▙▖▞▞▙ ARCHITECTURE & DESIGN ▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
 
 ## ▛▞ SYSTEM ARCHITECTURE
 
@@ -852,7 +852,7 @@ end
 
 :: ∎
 
-///▙▖▙▖▞▞▙ SECTION :: DEPLOYMENT ▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
+///▙▖▙▖▞▞▙ DEPLOYMENT ▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
 
 ## ▛▞ DOCKER DEPLOYMENT
 
@@ -917,7 +917,7 @@ For production, see [DEPLOYMENT.md](DEPLOYMENT.md) for:
 
 :: ∎
 
-///▙▖▙▖▞▞▙ SECTION :: ADVANCED USAGE ▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
+///▙▖▙▖▞▞▙ ADVANCED USAGE ▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
 
 ## ▛▞ ADVANCED USAGE PATTERNS
 
@@ -1022,7 +1022,7 @@ end
 
 :: ∎
 
-///▙▖▙▖▞▞▙ SECTION :: PERFORMANCE & SCALING ▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
+///▙▖▙▖▞▞▙ PERFORMANCE & SCALING ▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
 
 ## ▛▞ PERFORMANCE CHARACTERISTICS
 
@@ -1092,7 +1092,7 @@ sentinel:
 
 :: ∎
 
-///▙▖▙▖▞▞▙ SECTION :: TROUBLESHOOTING ▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
+///▙▖▙▖▞▞▙ TROUBLESHOOTING ▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
 
 ## ▛▞ TROUBLESHOOTING
 
@@ -1182,7 +1182,7 @@ echo '{"method":"health_check"}' | jq .
 
 :: ∎
 
-///▙▖▙▖▞▞▙ SECTION :: EXAMPLES ▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
+///▙▖▙▖▞▞▙ EXAMPLES ▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
 
 ## ▛▞ COMPLETE EXAMPLES
 
@@ -1210,7 +1210,7 @@ ruby examples/mcp_client.rb
 
 :: ∎
 
-///▙▖▙▖▞▞▙ SECTION :: TESTING ▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
+///▙▖▙▖▞▞▙ TESTING ▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
 
 ## ▛▞ TESTING
 
@@ -1256,7 +1256,7 @@ echo '{"method":"health_check"}' | \
 
 :: ∎
 
-///▙▖▙▖▞▞▙ SECTION :: PUBLISHING ▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
+///▙▖▙▖▞▞▙ PUBLISHING ▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
 
 ## ▛▞ PUBLISHING TO RUBYGEMS
 
@@ -1322,7 +1322,7 @@ git push origin v1.0.1
 
 :: ∎
 
-///▙▖▙▖▞▞▙ SECTION :: CONTRIBUTING ▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
+///▙▖▙▖▞▞▙ CONTRIBUTING ▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
 
 ## ▛▞ CONTRIBUTING
 
@@ -1379,7 +1379,7 @@ git push origin feature/amazing-feature
 
 ---
 
-```
+```rust
 ///▙▖▙▖▞▞▙▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
   SEAL :: DYNAMIC.PROMPT.SYSTEM :: v1.0.0
   ⧗ Complete Documentation & API Reference
@@ -1388,8 +1388,7 @@ git push origin feature/amazing-feature
   Status: PRODUCTION READY ✓
   Delivery: Ruby Gem • MCP Server • Docker
   Token Savings: 95%+ per conversation
-  
-  github.com/yourusername/dynamic-prompt
-  :: ∎
+  Credit: LLMDesign 2025
+  github.com/LLMDesign/Dynamic-Prompting
 ///▙▖▙▖▞▞▙▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
 ```
