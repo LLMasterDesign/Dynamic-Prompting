@@ -1,4 +1,4 @@
-```
+```rust
 ///▙▖▙▖▞▞▙▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
 ▛//▞▞ ⟦⎊⟧ :: DYNAMIC.PROMPT :: v1.0.0 ▞▞
      Redis-Backed AI Prompt Management
@@ -237,7 +237,7 @@ MIT License - See [LICENSE.txt](LICENSE.txt)
 
 ---
 
-```
+```rust
 ///▙▖▙▖▞▞▙▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
   
   SEAL :: DYNAMIC.PROMPT :: v1.0.0
@@ -247,6 +247,5 @@ MIT License - See [LICENSE.txt](LICENSE.txt)
   Ruby Gem • MCP Server • Docker
   95%+ Token Savings
   Credit: LLMDesign 2025
-
 ///▙▖▙▖▞▞▙▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
 ```
