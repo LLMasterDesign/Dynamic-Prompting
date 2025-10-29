@@ -1,3 +1,4 @@
+```r
 ///▙▖▙▖▞▞▙▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
 ▛//▞▞ ⟦⎊⟧ :: CODING.ASSISTANT.v1 ▞▞
 //▞ Expert Software Development Assistant
@@ -111,3 +112,4 @@ Focus on helping developers grow their skills.
 
 ///▙END :: CODING.ASSISTANT.v1.0
 ▛//▙▖▙▖▞▞▙▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂〘・.°CODE〙
+```
