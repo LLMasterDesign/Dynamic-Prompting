@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 # frozen_string_literal: true
 
-###▙▖▙▖▞▞▙ OPENAI INTEGRATION EXAMPLE ▂▂▂▂▂▂▂▂▂▂▂▂
+###▙▖▙▖▞▞▙ OPENAI :: INTEGRATION EXAMPLE ▂▂▂▂▂▂▂▂▂▂▂▂
 # Shows how to use DynamicPrompt with OpenAI API
 
 require 'dynamic_prompt'
