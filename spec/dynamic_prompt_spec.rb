@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-###▙▖▙▖▞▞▙ DYNAMIC PROMPT SPECS ▂▂▂▂▂▂▂▂▂▂▂▂
+###▙▖▙▖▞▞▙ DYNAMIC PROMPT :: SPECS ▂▂▂▂▂▂▂▂▂▂▂▂
 
 require 'spec_helper'
 
