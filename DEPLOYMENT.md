@@ -36,8 +36,8 @@ bundle install
 
 ```bash
 # Clone repo
-git clone https://github.com/yourusername/dynamic_prompt
-cd dynamic_prompt
+git clone https://github.com/LLMDesign/Dynamic-Prompting
+cd Dynamic-Prompting
 
 # Install dependencies
 bundle install
